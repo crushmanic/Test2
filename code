@@ -1,1 +1,20 @@
-Console
+class PasswordGenerator
+{
+    static void Main()
+    {
+        char[] numbers = "012345678910".ToCharArray();
+        char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrtsuvwxyz".ToCharArray();
+        char[] symbols = "!@#$%^&*()_-+{}[]:;<>?/|,.".ToCharArray();
+        int length = 10;
+        string password = GenerateRandomPassword(length, numbers, symbols, letters);
+        Console.WriteLine($"Generated Password: {password}");
+
+        
+    }
+
+    private static string GenerateRandomPassword (int length, char[] numbers, char[] symbols, char[] letters)
+    {
+        Random random = new Random(); 
+
+    }
+}
